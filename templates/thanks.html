@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Thank You! {% endblock %}
+
+{% block content %}
+
+<h1>Thank you!</h1>
+
+<p>Your answers have been saved and will be reviewed</p>
+
+<form action="/">
+    <button>Go Home</button>
+</form>
+
+{% for question, answer in qa_pairs %}
+
+<ul> {{question}}
+    <li> {{answer}} </li>
+</ul><br>
+
+{% endfor %}
+
+{% endblock %}
